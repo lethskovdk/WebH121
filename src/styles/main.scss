@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//Base
+@import '/src/styles/Base/all.scss';
+
+//Layout
+@import '/src/styles/Layout/all.scss';
+
+//pages
+@import '/src/styles/Pages/all.scss';
+
+//components
+@import '/src/styles/Components/all.scss';
+
+

@@ -1,0 +1,10 @@
+.footer {
+    @apply flex py-24 bg-darkBrown;
+    &__row {
+        @apply flex flex-row justify-between;
+    }
+
+    &__col {
+        @apply w-72;
+    }
+}

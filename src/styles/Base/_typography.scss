@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700');
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    @apply text-[42px] md:text-[84px] text-white;
+}
+
+h2 {
+    @apply text-[24px] md:text-[48px] text-white;
+}
+
+h3 {
+    @apply text-[18px] md:text-[22px] text-white;
+}
+
+p {
+    @apply text-[12px] md:text-[18px] text-white;
+    font-family: 'Crimson Text', serif;
+}

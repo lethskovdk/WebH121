@@ -1,0 +1,40 @@
+.header {
+    @apply h-24 mb-[-6rem] sticky top-0 z-50;
+    &__nav {
+        @apply h-full flex items-center justify-between flex-wrap;
+    }
+    &__logo-area {
+
+    }
+
+    &__main-menu-area {
+        @apply text-white;
+    }
+}
+
+.dropbtn {
+    color: white;
+    font-size: 16px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {display: block;}
