@@ -1,2 +1,10 @@
 @import 'typography';
 @import 'buttons';
+
+[container] {
+    @apply container mx-auto px-3;
+}
+
+[row] {
+    @apply flex flex-row;
+}

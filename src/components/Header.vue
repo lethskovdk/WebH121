@@ -1,46 +1,52 @@
-<script>
-import { RouterLink } from 'vue-router'
-import Modal from './Modal.vue'
-import { defineProps } from 'vue'
+<script setup>
+import Cart from './Cart/MiniCart.vue'
+import { ref } from 'vue'
 
-export default {
-  components: {
-    Modal
-  },
-  data() {
-    return {
-      showModal: false
-    }
-  }
-}
+const showMenu = ref(false)
+const toggleNav = () => (showMenu.value = !showMenu.value)
+
 </script>
 
 <template>
-    <header class="header">
-        <nav class="header__nav">
-            <div class="container m-auto flex items-center justify-between">
-                <div class="header__logo-area">
+  <header class="header">
+    <div container>
+      <nav class="header__nav">
+        <!-- Logo -->
+        <RouterLink to="/" class="header__logo">
+          <img class="header__img" src="src/assets/logo/smuknu_logo.png" alt="Smuk Nu logo">
+        </RouterLink>
 
-                </div>
+        <!-- Cart -->
+        <Cart></Cart>
 
-                <header class="header__main-menu-area">
-                  <RouterLink class="mr-7" to="/">Home</RouterLink>
-                  <div class="dropdown">
-                    <button class="mr-7 dropbtn">om os</button>
-                    <div class="dropdown-content">
-                      <RouterLink to="/AboutUs">Om os</RouterLink>
-                      <RouterLink to="/OurTeam">Vores Team</RouterLink>
-                    </div>
-                  </div>
-                  <RouterLink class="mr-7" to="/Menu">Menu</RouterLink>
-                  <RouterLink class="mr-7" to="/Gallery">Gallery</RouterLink>
-                  <RouterLink class="mr-7" to="/News">Nyheder</RouterLink>
-                  <RouterLink class="mr-7" to="/Contact">Kontakt</RouterLink>
-                  <button id="show-modal" class="btn" @click="showModal = true">Book bord</button>
-                </header>
-            </div>
-        </nav>
-    </header>
+        <!-- Mobile menu toggler -->
+        <div @click="toggleNav" class="mobileToggle">
+          <button type="button" class="mobileToggle__toggle">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              ></path>
+            </svg>
+          </button>
+        </div>
 
-    <modal :show="showModal" @close="showModal = false"/>
+        <!-- navigation -->
+        <ul :class="showMenu ? 'flex' : 'hidden'" class="navigation">
+          <li class="navigation__link">
+            <RouterLink class="mr-7" to="/">Forside</RouterLink>
+          </li>
+          <li class="navigation__link">
+            <RouterLink class="mr-7" to="/Products">Vores produkter</RouterLink>
+          </li>
+          <li class="navigation__link">
+            <RouterLink class="mr-7" to="/QA">Spørg om sundhed</RouterLink>
+          </li>
+          <li class="navigation__link">
+            <RouterLink class="" to="/Member">Bliv medlem</RouterLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 </template>

@@ -3,15 +3,17 @@
 @tailwind utilities;
 
 //Base
-@import '/src/styles/Base/all.scss';
+@import '/src/styles/base/all.scss';
 
 //Layout
-@import '/src/styles/Layout/all.scss';
+@import '/src/styles/layout/all.scss';
 
 //pages
-@import '/src/styles/Pages/all.scss';
+@import '/src/styles/pages/all.scss';
 
 //components
-@import '/src/styles/Components/all.scss';
+@import '/src/styles/components/all.scss';
 
-
+body {
+    @apply bg-white;
+}

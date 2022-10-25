@@ -1,11 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import AboutUs from '../views/AboutUs.vue'
-import OurTeam from '../views/OurTeam.vue'
-import Menu from '../views/Menu.vue'
-import Gallery from '../views/Gallery.vue'
-import News from '../views/News.vue'
-import Contact from '../views/Contact.vue'
+import Member from '../views/Member.vue'
+import Products from '../views/Products.vue'
+import QA from '../views/QA.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,30 +12,17 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/AboutUs',
-      component: AboutUs
+      path: '/Member',
+      component: Member
     },
     {
-      path: '/OurTeam',
-      component: OurTeam
+      path: '/Products',
+      component: Products
     },
     {
-      path: '/Menu',
-      component: Menu
-    },
-    {
-      path: '/Gallery',
-      component: Gallery
-    },
-    {
-      path: '/News',
-      component: News
-    },
-    {
-      path: '/Contact',
-      component: Contact
+      path: '/QA',
+      component: QA
     }
-
   ]
 })
 

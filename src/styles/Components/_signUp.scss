@@ -1,0 +1,19 @@
+.signUp {
+    @apply bg-lightPink py-8 sm:py-16 px-8 sm:px-0;
+    form {
+        @apply w-full md:w-1/2 mx-auto;
+        input {
+            @apply w-full border;
+        }
+        textarea {
+            @apply w-full border;
+        }
+    }
+
+    .thankMessage {
+        @apply flex flex-col justify-center items-center text-center;
+        img {
+            @apply h-44 w-44 sm:h-52 sm:w-52 md:h-60 md:w-60 my-8 rounded-full border-8 border-pink;
+        }
+    }
+}

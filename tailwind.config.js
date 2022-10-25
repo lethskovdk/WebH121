@@ -7,11 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkOrange: '#9e7538',
-        orange: '#F1B356',
-        lightGray: '#CCC4BC',
-        darkBrown: '#211E1B',
-        lightBrown: '#2E2925'
+        pink: '#FA96AA',
+        darkPink: '#ff7591',
+        lightPink: '#F7F0F2',
+        lightGray: '#D9D9D9',
+        transBlack: '#000000E6'
       }
     }
   },

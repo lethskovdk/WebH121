@@ -1,10 +1,6 @@
 .footer {
-    @apply flex py-24 bg-darkBrown;
-    &__row {
-        @apply flex flex-row justify-between;
-    }
-
-    &__col {
-        @apply w-72;
+    @apply bg-lightGray;
+    &__content {
+        @apply py-6 sm:py-12 md:py-16 my-auto h-full w-full flex flex-col items-center;
     }
 }

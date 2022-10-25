@@ -1,40 +1,29 @@
 .header {
-    @apply h-24 mb-[-6rem] sticky top-0 z-50;
-    &__nav {
-        @apply h-full flex items-center justify-between flex-wrap;
-    }
-    &__logo-area {
+  @apply z-50 drop-shadow h-20 mt-[-5rem] bg-white sticky top-0 flex items-center;
+  &__nav {
+    @apply my-auto flex justify-end items-center px-5 sm:px-0;
+  }
+  &__logo {
+    @apply text-xl font-bold text-white md:text-2xl hover:text-pink mr-auto;
+  }
+  &__img {
+    @apply h-10;
+  }
 
+  .mobileToggle {
+    @apply block md:hidden;
+    &__toggle {
+      @apply text-white hover:text-pink focus:outline-none focus:text-gray-400;
+      svg {
+        @apply w-7 h-7 fill-pink hover:fill-black;
+      }
     }
+  }
 
-    &__main-menu-area {
-        @apply text-white;
+  .navigation {
+    @apply bg-transBlack md:bg-white flex-col space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0; 
+    &__link {
+      @apply text-white md:text-black hover:text-pink active:text-pink;
     }
+  }
 }
-
-.dropbtn {
-    color: white;
-    font-size: 16px;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown:hover .dropdown-content {display: block;}

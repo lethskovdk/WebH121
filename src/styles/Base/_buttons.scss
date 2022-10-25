@@ -1,3 +1,7 @@
-.btn {
-    @apply bg-orange hover:bg-darkOrange text-black font-bold py-4 px-14 rounded-full
+.btn-pink {
+    @apply bg-pink hover:bg-darkPink text-white font-normal py-5 px-8 rounded-full drop-shadow-md;
+}
+
+.btn-dark {
+    @apply bg-black hover:bg-pink text-white font-normal py-1 px-8 rounded-full drop-shadow-md;
 }

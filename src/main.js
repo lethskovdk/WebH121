@@ -5,13 +5,16 @@ import axios from 'axios'
 
 import './styles/main.scss'
 
-Promise.all([axios.get('https://gastropub.webexam-mcdm.dk/api/images'), axios.get('https://gastropub.webexam-mcdm.dk/api/texts')]).then((res) => {
-    window.img = res[0].data;
-    window.txt = res[1].data;
+Promise.all([axios.get('https://smuknu.webmcdm.dk/products'), axios.get('https://smuknu.webmcdm.dk/questions'), axios.get('https://smuknu.webmcdm.dk/reviews')]).then((res) => {
+  window.products = res[0].data
 
-    const app = createApp(App)
+  window.questions = res[1].data
 
-    app.use(router)
+  window.reviews = res[2].data
 
-    app.mount('#app')
+  const app = createApp(App)
+
+  app.use(router)
+
+  app.mount('#app')
 })
