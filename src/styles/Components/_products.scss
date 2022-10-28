@@ -1,7 +1,7 @@
 .product-list {
     @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8;
     .product-card {
-        @apply bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg flex flex-col h-full;
+        @apply bg-white rounded-lg shadow-md hover:shadow-lg flex flex-col h-full;
         &__img-area {
             @apply relative border-b-2 border-pink;
             img {
@@ -10,10 +10,10 @@
             .discout {
                 @apply absolute right-4 bottom-5 py-2 px-7 text-center bg-pink rounded-md;
                 &__heading {
-                    @apply mb-[-0.5rem] text-[18px] text-lightGray dark:text-black;
+                    @apply mb-[-0.5rem] text-[18px] text-black;
                 }
                 &__procentage {
-                    @apply mb-0 text-[22px] text-white dark:text-black;
+                    @apply mb-0 text-[22px] text-black;
                 }
             }
         }
