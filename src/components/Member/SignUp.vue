@@ -34,7 +34,7 @@ const handleSubmit = (e) => {
                 <label>Navn</label><br/>
                 <input type="text" name="name" placeholder="Navn *" required><br><br>
                 <label>Email</label><br/>
-                <input type="email" name="email" placeholder="Email *" required><br><br>
+                <input type="email" name="email" placeholder="Email *" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"><br><br>
                 <label>Ris og/eller ros</label><br/>
                 <textarea name="message" placeholder="Besked *" required /><br><br>
                 <input type="submit" value="Submit" class="btn-pink w-full">
@@ -44,7 +44,7 @@ const handleSubmit = (e) => {
             <div class="thankMessage">
                 <h1>TAK!</h1>
                 <h1 class="bg-pink">{{name}}</h1>
-                <img src="src/assets/headers/subscribers.jpg" alt="Takke billede">
+                <img src="../../assets/subscribers.jpg" alt="Takke billede">
                 <p class="font-bold">Vi er enormt glade for at få dig<br/>som meldem</p>
                 <p>Kig i din inbox vi har sendt<br/>en lille velkomenst gave!</p>
             </div>

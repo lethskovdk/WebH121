@@ -3,7 +3,7 @@ import ProductList from './ProductList.vue'
 import { ref } from 'vue'
 import { defineProps } from 'vue'
 
-const props = defineProps({ids: Array})
+const props = defineProps({ ids: Array })
 const products = ref(window.products)
 </script>
 

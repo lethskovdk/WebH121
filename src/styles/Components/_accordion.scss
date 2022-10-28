@@ -1,0 +1,27 @@
+.accordion {
+    .accordionItem {
+        @apply py-8 border-b-2 border-pink;
+        &:first-child {
+            @apply border-t-2 border-pink;
+        }
+        &.open {
+            .accordionItem__question {
+                svg {
+                    fill: pink;
+                }
+            }
+            .accordionItem__answer {
+                @apply opacity-100 max-h-[1000px];
+            }
+        }   
+        &__question {
+            @apply relative transition-all ease-linear delay-300 pl-16;
+            svg {
+                @apply absolute top-1/2 -translate-y-6 left-0 transition-all ease-linear delay-300; 
+            } 
+        }
+        &__answer {
+            @apply pl-16 opacity-0 max-h-0 overflow-y-hidden transition-all duration-300 ease-out;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.cartDropdown {
+    @apply  h-screen w-full overflow-hidden bg-transBlack absolute top-20 left-0 z-10;
+    .cartItems {
+        @apply bg-white;
+        &__window {
+            @apply overflow-y-auto max-h-96;
+        }
+        .cartItem {
+            @apply h-36 p-8 border-b border-pink;
+            &__img  {
+                @apply w-2/5 sm:w-1/5;
+                img {
+                    @apply h-20 w-20 rounded-lg;
+                }
+            }
+            &__content {
+                width: 100%;
+            }
+        }
+        &__total {
+            @apply py-4 px-8
+        }
+    }
+}

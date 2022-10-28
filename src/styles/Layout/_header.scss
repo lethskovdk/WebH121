@@ -1,5 +1,5 @@
 .header {
-  @apply z-50 drop-shadow h-20 mt-[-5rem] bg-white sticky top-0 flex items-center;
+  @apply z-50 drop-shadow h-20 mt-[-5rem] bg-white sticky top-0 flex items-center relative;
   &__nav {
     @apply my-auto flex justify-end items-center px-5 sm:px-0;
   }
@@ -10,8 +10,35 @@
     @apply h-10;
   }
 
+  .cartToggle {
+    @apply relative mr-7;
+    &__toggle {
+      .count {
+        @apply absolute top-1/2 left-1/2;
+        transform: translate(-50%, -50%);
+      }
+    }
+    svg {
+      @apply h-10 w-10
+    }
+  }
+
+  .mobile {
+    @apply block lg:hidden
+  }
+
+  .main-navigation {
+    @apply hidden lg:block;
+    ul {
+      @apply flex font-bold flex-row items-center space-x-10;
+    } 
+    &__link {
+      @apply text-white md:text-black hover:text-pink active:text-pink;
+    }
+  }
+
   .mobileToggle {
-    @apply block md:hidden;
+    @apply block lg:hidden;
     &__toggle {
       @apply text-white hover:text-pink focus:outline-none focus:text-gray-400;
       svg {
@@ -20,10 +47,24 @@
     }
   }
 
-  .navigation {
-    @apply bg-transBlack md:bg-white flex-col space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0; 
-    &__link {
-      @apply text-white md:text-black hover:text-pink active:text-pink;
+  .mobile-navigation {
+    transform: translateY(-200%);
+    transition: all .4s ease-out;
+    opacity: 0;
+    &.open {
+      transform: translateY(0%);
+      opacity: 100;
     }
-  }
+    &.close {
+      transform: translateY(-100vw);
+      opacity: 0;
+    }
+    @apply z-40 lg:hidden bg-transBlack rounded-b-xl absolute top-[80px] left-0 w-full font-bold flex-col items-center;
+    ul {
+      @apply w-full;
+    }
+    &__link {
+      @apply text-white text-right my-3 mx-5 hover:text-pink active:text-pink;
+    }
+  }  
 }

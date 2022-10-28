@@ -6,5 +6,7 @@ const questions = ref(window.questions)
 </script>
 
 <template>
-    <AccordionRender :questions="questions"></AccordionRender>
+    <ul class="accordion">
+            <AccordionRender v-for="(question, key) in questions" :key="key" :question="question"></AccordionRender>
+    </ul>
 </template>
