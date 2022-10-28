@@ -34,7 +34,7 @@ const handleSubmit = (e) => {
                 <label>Navn</label><br/>
                 <input type="text" name="name" placeholder="Navn *" required><br><br>
                 <label>Email</label><br/>
-                <input type="email" name="email" placeholder="Email *" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"><br><br>
+                <input type="email" name="email" placeholder="Email *" required pattern="^([\w-\]+\.+[\w-\]s)+@([\w-]+\.)+[\w-]{2,4}$"><br><br>
                 <label>Ris og/eller ros</label><br/>
                 <textarea name="message" placeholder="Besked *" required /><br><br>
                 <input type="submit" value="Submit" class="btn-pink w-full">
