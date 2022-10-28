@@ -4,10 +4,18 @@ import { onMounted, ref } from 'vue'
 const showCart = ref(false)
 const cart = ref([])
 const toggleCart = () => (showCart.value = !showCart.value)
+const totalPrice = ref(0)
 
 const fetchCart = () => {
+  totalPrice.value = 0
   if (sessionStorage.getItem('cart')) {
-    cart.value = JSON.parse(sessionStorage.getItem('cart'))
+    const cartValue = JSON.parse(sessionStorage.getItem('cart'))
+    cart.value = cartValue
+
+    totalPrice.value = cartValue.map(product => product.price).reduce(
+      (previousValue, currentValue) => previousValue + currentValue,
+      totalPrice.value
+    )
   }
 }
 
@@ -68,7 +76,7 @@ const removeItem = (product) => {
           <div class="cartItems__total">
             <div row>
               <p class="mb-0 w-1/2">Ialt</p>
-              <p class="mb-0 w-1/2 font-bold text-right">sum</p>
+              <p class="mb-0 w-1/2 font-bold text-right">{{totalPrice}} Kr.</p>
             </div>
           </div>
         </div>
